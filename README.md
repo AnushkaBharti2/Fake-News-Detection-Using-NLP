@@ -4,7 +4,7 @@
 
 # VeriFact — AI Fake News Detection
 
-🌐 **Live Demo:** [Try VeriFact]([YOUR_LIVE_LOVABLE_URL](https://verifact-news-compass.lovable.app/))
+🌐 **Live Demo:**https://verifact-news-compass.lovable.app/
 
 🔗 **GitHub Repository:** [View Source](https://github.com/AnushkaBharti2/Fake-News-Detection-Using-NLP)
 
