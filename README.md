@@ -2,7 +2,11 @@
 
 <img width="2048" height="768" alt="verifact-banner" src="https://github.com/user-attachments/assets/0ada0ab8-f38f-46b2-86c0-f97fda304adf" />
 
+## 🌐 Live Demo
 
+🚀 **Try VeriFact live:** [Launch Application](https://fake-news-detection-verifact.onrender.com/)
+
+> Explore the application through the live demo.
 📌 Overview
 VeriFact is a news-analysis project built around Natural Language Processing (NLP) and Machine Learning. It explores how textual patterns in news content can be processed and used by a classification model to identify content that may be misleading.
 
