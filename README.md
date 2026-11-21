@@ -2,9 +2,11 @@
 
 <img width="2048" height="768" alt="verifact-banner" src="https://github.com/user-attachments/assets/0ada0ab8-f38f-46b2-86c0-f97fda304adf" />
 
-## 🌐 Live Demo
+# VeriFact — AI Fake News Detection
 
-🚀 **Try VeriFact live:** [Launch Application](https://fake-news-detection-verifact.onrender.com/)
+🌐 **Live Demo:** [Try VeriFact]([YOUR_LIVE_LOVABLE_URL](https://verifact-news-compass.lovable.app/))
+
+🔗 **GitHub Repository:** [View Source](https://github.com/AnushkaBharti2/Fake-News-Detection-Using-NLP)
 
 > Explore the application through the live demo.
 📌 Overview
