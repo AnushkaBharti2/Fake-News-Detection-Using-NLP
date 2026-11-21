@@ -1,6 +1,7 @@
 # VeriFact — AI-Powered Fake News Detection
 
-![VeriFact Banner](verifact-banner.png)
+<img width="2048" height="768" alt="verifact-banner" src="https://github.com/user-attachments/assets/0ada0ab8-f38f-46b2-86c0-f97fda304adf" />
+
 
 📌 Overview
 VeriFact is a news-analysis project built around Natural Language Processing (NLP) and Machine Learning. It explores how textual patterns in news content can be processed and used by a classification model to identify content that may be misleading.
