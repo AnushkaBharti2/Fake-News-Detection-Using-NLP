@@ -154,160 +154,419 @@ flowchart TD
     G --> H[Show result in extension UI]
 ```
 The exact extension behavior depends on the implementation and its configuration. Review the extension scripts and manifest before describing it as automatically analyzing every webpage.
-🛠️ Tech Stack
-Technology	Use
-Python	Application and ML-side development.
-Flask	Web application framework.
-NLP	Text processing and feature preparation.
-Scikit-learn	Machine-learning tooling and classification pipeline components.
-HTML / CSS	Web interface structure and styling.
-JavaScript	Frontend and browser-extension behavior.
-Docker	Containerization.
-Docker Compose	Container configuration and orchestration.
-Pytest	Test execution (development dependency).
-Git / GitHub	Version control and source hosting.
+# 🛠️ Tech Stack
 
+<div align="center">
 
-📂 Project Structure
-Fake-News-Detection-Using-NLP/
-├── app.py                       # Main Flask application
-├── make_admin.py                 # Administrative helper
-├── test_app.py                   # Application tests
-├── model/
-│   ├── preprocess.py              # Text preprocessing
-│   ├── factcheck.py               # Fact-checking-related logic
-│   ├── explain.py                 # Explainability component
-│   ├── train_model.py              # ML training pipeline
-│   ├── train_bert.py               # Transformer experimentation
-│   ├── model.pkl                   # Saved model
-│   ├── vectorizer.pkl               # Saved vectorizer
-│   └── metrics.json                 # Model metrics
-├── browser-extension/
-│   ├── manifest.json
-│   ├── background.js
-│   ├── popup.html
-│   ├── popup.js
-│   └── icons/
-├── data/
-│   ├── sample_data.csv
-│   ├── generate_sample_data.py
-│   └── README.md
-├── templates/                       # HTML templates
-├── static/                           # Static assets
-├── .github/                           # GitHub configuration/workflows
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── requirements-dev.txt
-├── runtime.txt
-├── Procfile
-├── .env.example
-├── .gitignore
-├── LICENSE
-└── README.md
-🖥️ Screenshots
-Add screenshots of the running application here. Replace these placeholders with real screenshots from your local app.
+| ⚙️ Technology | 💡 Purpose |
+|:---|:---|
+| 🐍 **Python** | Core application logic and machine learning development |
+| 🌐 **Flask** | Backend web framework and application routing |
+| 🧠 **Natural Language Processing (NLP)** | Text preprocessing, feature extraction, and language analysis |
+| 📊 **Scikit-learn** | Machine learning models, vectorization, and classification |
+| 🎨 **HTML5 & CSS3** | Structure, layout, and styling of the user interface |
+| ⚡ **JavaScript** | Frontend interactions and browser extension functionality |
+| 🐳 **Docker** | Containerization and consistent application environments |
+| 🔗 **Docker Compose** | Container configuration and multi-service management |
+| 🧪 **Pytest** | Automated testing and application validation |
+| 🗂️ **Git & GitHub** | Version control, collaboration, and project hosting |
+
+</div>
+
+---
+
+# 📂 Project Structure
 
 <details>
-<summary>📷 Add your application screenshots</summary>Home / Landing Page
-<!-- Add screenshot: ![VeriFact Home](screenshots/home.png) -->
-News Analysis Result
-<!-- Add screenshot: ![Analysis Result](screenshots/result.png) -->
-Browser Extension
-<!-- Add screenshot: ![Browser Extension](screenshots/extension.png) --></details>🚀 Getting Started
-Prerequisites
-- Python installed and available on your PATH
-- Git
-- pip
-- A modern web browser
-- Docker (optional, for containerized execution)
-1. Clone the repository
+<summary><b>📁 Explore the complete project architecture</b></summary>
+
+```text
+Fake-News-Detection-Using-NLP/
+│
+├── 🚀 app.py
+├── 🛡️ make_admin.py
+├── 🧪 test_app.py
+│
+├── 📁 model/
+│   ├── ⚙️ preprocess.py
+│   ├── 🔍 factcheck.py
+│   ├── 💡 explain.py
+│   ├── 🧠 train_model.py
+│   ├── 🤖 train_bert.py
+│   ├── 📦 model.pkl
+│   ├── 📊 vectorizer.pkl
+│   └── 📈 metrics.json
+│
+├── 📁 browser-extension/
+│   ├── 📄 manifest.json
+│   ├── ⚡ background.js
+│   ├── 🖥️ popup.html
+│   ├── 🎮 popup.js
+│   └── 📁 icons/
+│
+├── 📁 data/
+│   ├── 📊 sample_data.csv
+│   ├── ⚙️ generate_sample_data.py
+│   └── 📖 README.md
+│
+├── 📁 templates/
+│   └── 🌐 HTML templates
+│
+├── 📁 static/
+│   └── 🎨 CSS, JavaScript & static assets
+│
+├── 📁 .github/
+│   └── ⚙️ GitHub workflows & configuration
+│
+├── 🐳 Dockerfile
+├── 🐳 docker-compose.yml
+├── 📦 requirements.txt
+├── 🧪 requirements-dev.txt
+├── 🐍 runtime.txt
+├── 🚀 Procfile
+├── 🔐 .env.example
+├── 🚫 .gitignore
+├── 📜 LICENSE
+└── 📖 README.md
+```
+
+</details>
+
+### 🧩 Core Components
+
+| Component | Responsibility |
+|---|---|
+| 🚀 `app.py` | Application entry point and web functionality |
+| 🧠 `model/` | Machine learning, preprocessing, training, and analysis |
+| 🔍 `preprocess.py` | Text preprocessing and feature preparation |
+| 💡 `explain.py` | Prediction explanation functionality |
+| 📰 `factcheck.py` | Fact-check-related functionality and integrations |
+| 🌐 `browser-extension/` | Browser extension interface and scripts |
+| 📊 `data/` | Dataset resources and sample data utilities |
+| 🎨 `templates/` | Web page templates |
+| 🖥️ `static/` | Stylesheets, scripts, and visual assets |
+| 🧪 `test_app.py` | Automated application tests |
+
+---
+
+# 🖥️ Application Showcase
+
+<div align="center">
+
+### 📸 Experience VeriFact
+
+*Visual walkthrough of the application interface and its functionality.*
+
+</div>
+
+| 🏠 Home & Landing Page | 📰 News Analysis |
+|:---:|:---:|
+| Add homepage screenshot here | Add analysis screenshot here |
+| **Application Interface** | **News Detection Workflow** |
+
+| 🔍 Analysis Results | 🌐 Browser Extension |
+|:---:|:---:|
+| Add result screenshot here | Add extension screenshot here |
+| **Prediction & Insights** | **Browser Integration** |
+
+> 📌 **Show, don't just tell!** Screenshots of your application make it easier for visitors, recruiters, and developers to understand the project at a glance.
+
+---
+
+# 🚀 Getting Started
+
+Follow these steps to set up VeriFact locally.
+
+## 📋 Prerequisites
+
+Before installation, make sure you have:
+
+- 🐍 Python installed and added to your system PATH
+- 📦 pip package manager
+- 🗂️ Git
+- 🌐 A modern web browser
+- 🐳 Docker (optional)
+
+---
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/AnushkaBharti2/Fake-News-Detection-Using-NLP.git
-2. Enter the project directory
+```
+
+## 2️⃣ Navigate to the Project Directory
+
+```bash
 cd Fake-News-Detection-Using-NLP
-3. Create a virtual environment
+```
+
+## 3️⃣ Create a Virtual Environment
+
+```bash
 python -m venv venv
-4. Activate it
-Windows
+```
+
+## 4️⃣ Activate the Virtual Environment
+
+### 🪟 Windows
+
+```bash
 venv\Scripts\activate
-Linux / macOS
+```
+
+### 🐧 Linux / 🍎 macOS
+
+```bash
 source venv/bin/activate
-5. Install dependencies
+```
+
+## 5️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-6. Configure environment variables
-Create a .env file in the project root based on .env.example. See Environment Configuration.
-7. Run the application
+```
+
+## 6️⃣ Configure Environment Variables
+
+Create a `.env` file in the root directory using `.env.example` as your template.
+
+Configure the required values before starting the application.
+
+## 7️⃣ Launch VeriFact
+
+```bash
 python app.py
-Open the local address printed in the terminal to access the web application.
-⚙️ Environment Configuration
-Use .env.example as a template and create a local .env file. Example:
-SECRET_KEY=replace_with_a_random_secret
+```
+
+🌐 Open the local URL displayed in your terminal to access the application.
+
+---
+
+# ⚙️ Environment Configuration
+
+VeriFact uses environment variables to manage application configuration and sensitive credentials.
+
+### 📝 Configuration Setup
+
+1. Locate `.env.example` in the project root.
+2. Create a copy named `.env`.
+3. Add your local configuration values.
+4. Keep your `.env` file private.
+
+### 🔑 Example Configuration
+
+```env
+SECRET_KEY=replace_with_a_secure_random_value
 FACTCHECK_API_KEY=your_api_key_if_required
-Variable	Description
-SECRET_KEY	Application secret configuration. Set a unique, random value locally.
-FACTCHECK_API_KEY	Credential for fact-check integration, if enabled/configured.
+```
 
+| 🔐 Variable | 📝 Description |
+|---|---|
+| `SECRET_KEY` | Secret configuration used by the Flask application |
+| `FACTCHECK_API_KEY` | API credential for fact-check functionality, if enabled |
 
-Do not commit .env files, tokens, or credentials. The repository's .gitignore should keep local secrets out of version control.
-🌍 Running with Docker
-Docker files are included for containerized execution.
+> ⚠️ Never commit API keys, passwords, tokens, or private environment configuration to GitHub.
+
+---
+
+# 🐳 Run with Docker
+
+Prefer a containerized environment? VeriFact includes Docker configuration for streamlined deployment and execution.
+
+### ▶️ Start the application
+
+```bash
 docker compose up --build
-To stop the containers:
+```
+
+### ⏹️ Stop the application
+
+```bash
 docker compose down
-Review the Docker and environment configuration before deployment. Some services may require local environment variables.
-🧪 Testing
-Install development requirements if needed:
+```
+
+### 🧱 Containerization Workflow
+
+```mermaid
+flowchart TD
+    A["📁 Project Source"] --> B["🐳 Docker Build"]
+    B --> C["📦 Image Creation"]
+    C --> D["🚀 Container Startup"]
+    D --> E["🌐 Application Running"]
+    E --> F["🛑 docker compose down"]
+```
+
+> 💡 Review environment variables, exposed ports, and service configuration before using the application in a production environment.
+
+---
+
+# 🧪 Testing & Quality Assurance
+
+Testing helps validate application functionality, catch regressions, and maintain reliability during development.
+
+### 🔧 Install Development Dependencies
+
+```bash
 pip install -r requirements-dev.txt
-Run the test suite:
+```
+
+### 🧪 Run the Test Suite
+
+```bash
 pytest
-Use the test output to verify the implemented application behavior and identify regressions.
-📊 Evaluation & Metrics
-The repository includes a model/metrics.json file for stored metrics. When reporting model performance, use the values from that file and clearly state the dataset and evaluation method used.
+```
 
-Common classification metrics include:
-Metric	Meaning
-Accuracy	Overall fraction of correct predictions.
-Precision	Fraction of predicted positives that are correct.
-Recall	Fraction of actual positives identified.
-F1-score	Harmonic mean of precision and recall.
-Confusion matrix	Breakdown of correct and incorrect predictions by class.
+### 🔄 Testing Workflow
 
+```mermaid
+flowchart TD
+    A["👨‍💻 Code Changes"] --> B["🧪 Run Tests"]
+    B --> C{"All Tests Pass?"}
+    C -->|Yes| D["✅ Ready for Further Validation"]
+    C -->|No| E["🔍 Investigate Failures"]
+    E --> F["🛠️ Fix Issues"]
+    F --> B
+```
 
-Accuracy alone may not capture the risks of misinformation detection. Performance can vary across topics, sources, time periods, writing styles, and datasets.
-🔒 Security & Responsible Use
-- Store API keys and secrets in local environment variables, not source files.
-- Keep dependencies reasonably up to date.
-- Validate submitted content on the server.
-- Avoid logging sensitive information unnecessarily.
-- Review external integrations before deployment.
-- Treat predictions as signals for further investigation—not definitive truth labels.
-⚠️ Limitations
-- Predictions are dependent on the training data and model design.
-- Text alone may not provide enough context to verify a claim.
-- The model may not generalize to new events, topics, or publishers.
-- Legitimate content may be incorrectly flagged, and misleading content may be missed.
-- Classification is not equivalent to source verification or independent fact-checking.
-- External integrations may require credentials and additional configuration.
-🗺️ Roadmap
-- [ ] Capture and add polished application screenshots.
-- [ ] Improve preprocessing and evaluate alternative feature representations.
-- [ ] Benchmark additional classification models.
-- [ ] Investigate transformer-based model approaches.
-- [ ] Improve explainability and result transparency.
-- [ ] Expand fact-checking sources and evidence presentation.
-- [ ] Improve browser-extension user experience.
-- [ ] Add more automated tests.
-- [ ] Add CI checks for quality and reliability.
-- [ ] Review deployment configuration for production use.
-🤝 Contributions & Development
-Ideas, bug reports, and improvements are welcome. Areas that can be explored include NLP, model evaluation, explainability, interface development, extension behavior, testing, documentation, and deployment.
+---
 
-Before proposing changes, review the existing project structure and license requirements.
-📄 License & Attribution
-This repository contains work based on an existing open-source project. The original license and attribution notices are retained. See the LICENSE file for details. Please preserve applicable attribution when redistributing or modifying the project.
-⚖️ Disclaimer
-VeriFact is an AI-assisted news analysis project intended for educational and research purposes. It cannot guarantee the truth or falsehood of a news article or claim. Model predictions can be wrong, biased, incomplete, or outdated. Verify important information using multiple credible sources and independent fact-checking.
-<p align="center">
-  <strong>VeriFact — Analyze information. Think critically.</strong>
-</p>
+# 📊 Model Evaluation & Metrics
 
+Machine learning performance should be evaluated using multiple metrics rather than relying on a single accuracy value.
+
+VeriFact includes a `model/metrics.json` file for storing evaluation results.
+
+### 📈 Key Evaluation Metrics
+
+| Metric | Description | Why It Matters |
+|---|---|---|
+| 🎯 **Accuracy** | Proportion of correctly classified samples | Overall prediction performance |
+| 🔎 **Precision** | Proportion of predicted positive samples that are correct | Reduces false positive classifications |
+| 📡 **Recall** | Proportion of actual positive samples correctly identified | Measures how many relevant samples were detected |
+| ⚖️ **F1-Score** | Harmonic mean of precision and recall | Balances both metrics |
+| 🧩 **Confusion Matrix** | Breakdown of correct and incorrect predictions | Helps understand classification errors |
+
+### 🧠 Evaluation Pipeline
+
+```mermaid
+flowchart TD
+    A["📚 Evaluation Dataset"] --> B["🧹 Preprocessing"]
+    B --> C["🔤 Feature Extraction"]
+    C --> D["🤖 Trained Model"]
+    D --> E["📊 Generate Predictions"]
+    E --> F["📈 Calculate Metrics"]
+    F --> G["🎯 Accuracy"]
+    F --> H["🔎 Precision"]
+    F --> I["📡 Recall"]
+    F --> J["⚖️ F1-Score"]
+```
+
+> 📌 Accuracy alone does not tell the whole story. Performance can vary across topics, sources, writing styles, time periods, and datasets.
+
+---
+
+# 🔒 Security & Responsible AI
+
+Responsible machine learning involves protecting user data, securing application configuration, and understanding the limitations of automated predictions.
+
+### 🔐 Security Best Practices
+
+- 🔑 Store credentials and API keys in environment variables.
+- 🚫 Never commit `.env` files or secrets to version control.
+- 🛡️ Validate and sanitize user input on the server.
+- 📦 Keep dependencies updated and review vulnerabilities.
+- 📝 Avoid unnecessarily logging sensitive user information.
+- 🌐 Review third-party API integrations before deployment.
+- ⚙️ Review deployment settings, permissions, and configuration.
+
+### 🤖 Responsible AI Principles
+
+- Treat model predictions as **indicators—not absolute facts**.
+- Understand the potential impact of false positives and false negatives.
+- Be mindful of biases in training data.
+- Avoid using automated predictions as the sole basis for important decisions.
+- Verify suspicious information using credible, independent sources.
+
+---
+
+# ⚠️ Limitations
+
+Although machine learning can assist in identifying potentially misleading content, fake news detection remains a complex problem.
+
+- 📚 **Dataset Dependency:** Model behavior depends heavily on the quality, diversity, and distribution of training data.
+- 🌍 **Limited Generalization:** New events, unfamiliar topics, and changing writing styles may affect performance.
+- 📝 **Context Sensitivity:** Text alone may not provide sufficient context to evaluate a claim accurately.
+- ⚖️ **Classification Errors:** Legitimate content may be flagged incorrectly, and misleading content may go undetected.
+- 🔄 **Changing Information:** News can evolve as new evidence becomes available.
+- 🔍 **Prediction ≠ Verification:** A machine learning classification is not equivalent to independent source verification or professional fact-checking.
+- 🔗 **External Dependencies:** Some integrations may require additional configuration, credentials, or external services.
+
+---
+
+# 🗺️ Future Roadmap
+
+The project can continue evolving through improvements in model quality, transparency, user experience, and reliability.
+
+- [ ] 📸 Add polished screenshots and a complete application walkthrough.
+- [ ] 🧹 Improve preprocessing and feature engineering.
+- [ ] 🤖 Benchmark additional machine learning models.
+- [ ] 🧠 Explore transformer-based model approaches.
+- [ ] 💡 Enhance explainability and prediction transparency.
+- [ ] 🔗 Expand fact-checking integrations and evidence presentation.
+- [ ] 🌐 Improve browser extension functionality and usability.
+- [ ] 🧪 Expand automated test coverage.
+- [ ] ⚙️ Strengthen CI workflows and code-quality checks.
+- [ ] 🚀 Improve deployment readiness and configuration.
+- [ ] 📊 Expand evaluation across diverse datasets and topics.
+
+---
+
+# 🤝 Contributions
+
+Ideas, improvements, bug reports, and contributions are welcome.
+
+Potential areas for development include:
+
+- 🧠 NLP and machine learning
+- 📊 Model evaluation and benchmarking
+- 💡 Explainable AI
+- 🎨 Frontend and UI/UX improvements
+- 🌐 Browser extension development
+- 🧪 Testing and reliability
+- 📖 Documentation
+- 🚀 Deployment and infrastructure
+
+When contributing, review the existing project structure and applicable licensing requirements before making changes.
+
+---
+
+# 📜 License & Attribution
+
+This project contains work based on an existing open-source project.
+
+The original license and attribution notices are retained. Please review the **[LICENSE](LICENSE)** file before modifying, redistributing, or using this project.
+
+Respect the original license requirements and preserve applicable copyright notices.
+
+---
+
+# ⚖️ Disclaimer
+
+VeriFact is an AI-assisted news analysis project intended for educational, research, and informational purposes.
+
+It **does not guarantee the truth or falsehood of any news article, claim, or statement**. Machine learning predictions may be inaccurate, biased, incomplete, or outdated.
+
+Always verify important information using multiple credible sources, independent evidence, and reliable fact-checking resources.
+
+---
+
+<div align="center">
+
+## 🛡️ VeriFact
+
+### Analyze information. Think critically.
+
+**Building a more informed digital world — one analysis at a time.** 🌐
+
+</div>
